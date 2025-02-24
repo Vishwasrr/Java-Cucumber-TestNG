@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression" verbose="1" parallel="methods" thread-count="5">
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"></parameter>
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.mylaptop.asts.test.MutliBrowser"/>
+        </classes>
+    </test>
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"></parameter>
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.mylaptop.asts.test.MutliBrowser"/>
+        </classes>
+    </test>
+</suite>
