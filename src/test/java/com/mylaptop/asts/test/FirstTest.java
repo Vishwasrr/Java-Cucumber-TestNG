@@ -1,5 +1,6 @@
 package com.mylaptop.asts.test;
 
+import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ public class FirstTest {
 
     WebDriver driver;
 
-    @BeforeTest
+    @Before
     public void setup(){
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
